@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"plist"];
+    self.menuList = [[NSArray alloc] initWithContentsOfFile:path];
+//    self.menuList = @[@"1",@"2",@"3",@"4",@"5"];
     // Do any additional setup after loading the view.
 }
 
@@ -23,6 +26,41 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+//@synthesize menuList = _menuList;
+
+- (void)setMenuList:(NSArray *)menuList
+{
+    _menuList = menuList;
+    [self.view reloadInputViews];
+}
+//
+//- (NSArray *)menuList
+//{
+//    if (_menuList) {
+//        NSString *path = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"plist"];
+//        _menuList = [[NSArray alloc] initWithContentsOfFile:path];
+//    }
+//    
+//    return _menuList;
+//}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.menuList count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"identifier"];
+    if ( cell == nil ) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"identifier"];
+    }
+    
+    cell.textLabel.text = self.menuList[indexPath.row];
+    return cell;
+}
+
 
 
 /*

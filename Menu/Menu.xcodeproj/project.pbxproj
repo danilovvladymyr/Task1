@@ -40,7 +40,7 @@
 		DA19033F1B87EBA500FA3AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA1903401B87EBA500FA3AA6 /* MenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuTests.m; sourceTree = "<group>"; };
 		DABA95951B8A3ED2003322D1 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
-		DABA95961B8A3ED2003322D1 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		DABA95961B8A3ED2003322D1 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; usesTabs = 0; };
 		DABA959D1B8A5694003322D1 /* menu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = menu.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
