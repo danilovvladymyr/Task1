@@ -11,6 +11,7 @@
 @interface MenuViewController : UIViewController
 <UITableViewDataSource, UITableViewDelegate>
 
+//@property (weak, nonatomic) IBOutlet UITableView *table;
 @property (nonatomic, copy) NSArray *menuList;
 
 @end

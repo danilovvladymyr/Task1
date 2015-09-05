@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		DA1903271B87EBA400FA3AA6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1903261B87EBA400FA3AA6 /* main.m */; };
 		DA19032A1B87EBA400FA3AA6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1903291B87EBA400FA3AA6 /* AppDelegate.m */; };
-		DA1903301B87EBA400FA3AA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA19032E1B87EBA400FA3AA6 /* Main.storyboard */; };
 		DA1903321B87EBA400FA3AA6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA1903311B87EBA400FA3AA6 /* Images.xcassets */; };
 		DA1903351B87EBA400FA3AA6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA1903331B87EBA400FA3AA6 /* LaunchScreen.xib */; };
 		DA1903411B87EBA500FA3AA6 /* MenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1903401B87EBA500FA3AA6 /* MenuTests.m */; };
@@ -33,7 +32,6 @@
 		DA1903261B87EBA400FA3AA6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DA1903281B87EBA400FA3AA6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DA1903291B87EBA400FA3AA6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		DA19032F1B87EBA400FA3AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA1903311B87EBA400FA3AA6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DA1903341B87EBA400FA3AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DA19033A1B87EBA500FA3AA6 /* MenuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MenuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,7 +86,6 @@
 				DABA95951B8A3ED2003322D1 /* MenuViewController.h */,
 				DABA95961B8A3ED2003322D1 /* MenuViewController.m */,
 				DABA959D1B8A5694003322D1 /* menu.plist */,
-				DA19032E1B87EBA400FA3AA6 /* Main.storyboard */,
 				DA1903311B87EBA400FA3AA6 /* Images.xcassets */,
 				DA1903331B87EBA400FA3AA6 /* LaunchScreen.xib */,
 				DA1903241B87EBA400FA3AA6 /* Supporting Files */,
@@ -202,7 +199,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA1903301B87EBA400FA3AA6 /* Main.storyboard in Resources */,
 				DABA959E1B8A5694003322D1 /* menu.plist in Resources */,
 				DA1903351B87EBA400FA3AA6 /* LaunchScreen.xib in Resources */,
 				DA1903321B87EBA400FA3AA6 /* Images.xcassets in Resources */,
@@ -248,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		DA19032E1B87EBA400FA3AA6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DA19032F1B87EBA400FA3AA6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		DA1903331B87EBA400FA3AA6 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

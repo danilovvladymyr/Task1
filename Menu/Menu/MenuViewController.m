@@ -8,19 +8,30 @@
 
 #import "MenuViewController.h"
 
+#define MENUINSET 0.8
+
 @interface MenuViewController ()
 
 @end
 
-@implementation MenuViewController
+@implementation MenuViewController {
+    UITableView *menutable;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSString *path = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"plist"];
     self.menuList = [[NSArray alloc] initWithContentsOfFile:path];
+    menutable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width * MENUINSET , self.view.frame.size.height) style:UITableViewStylePlain];
+    menutable.dataSource = self;
+    menutable.delegate = self;
+    [self.view addSubview:menutable];
+    
+    
 //    self.menuList = @[@"1",@"2",@"3",@"4",@"5"];
     // Do any additional setup after loading the view.
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,18 +43,8 @@
 - (void)setMenuList:(NSArray *)menuList
 {
     _menuList = menuList;
-    [self.view reloadInputViews];
+//    [self.view reloadInputViews];
 }
-//
-//- (NSArray *)menuList
-//{
-//    if (_menuList) {
-//        NSString *path = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"plist"];
-//        _menuList = [[NSArray alloc] initWithContentsOfFile:path];
-//    }
-//    
-//    return _menuList;
-//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -59,6 +60,11 @@
     
     cell.textLabel.text = self.menuList[indexPath.row];
     return cell;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
 }
 
 
