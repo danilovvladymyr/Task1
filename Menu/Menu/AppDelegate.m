@@ -20,8 +20,8 @@
     // Override point for customization after application launch.
     
     MenuViewController *vc = [[MenuViewController alloc] init];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-    _window.rootViewController = nav;
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    _window.rootViewController = vc;
     return YES;
 }
 

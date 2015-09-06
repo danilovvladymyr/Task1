@@ -23,6 +23,7 @@
     NSString *path = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"plist"];
     self.menuList = [[NSArray alloc] initWithContentsOfFile:path];
     menutable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width * MENUINSET , self.view.frame.size.height) style:UITableViewStylePlain];
+    menutable.separatorColor = [UIColor clearColor];
     menutable.dataSource = self;
     menutable.delegate = self;
     [self.view addSubview:menutable];
@@ -78,5 +79,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 5;
+}
 
 @end
