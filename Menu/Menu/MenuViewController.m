@@ -1,3 +1,4 @@
+
 //
 //  MenuViewController.m
 //  Menu
@@ -10,16 +11,23 @@
 
 #define MENUINSET 0.8
 
-@interface MenuViewController ()
-
+@interface MenuViewController () {
+    UITableView *menutable;
+    UILabel *logOutLabel;
+}
 @end
 
 @implementation MenuViewController {
-    UITableView *menutable;
+//    UITableView *menutable;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.edgesForExtendedLayout = UIRectEdgeNone;
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.extendedLayoutIncludesOpaqueBars = NO;
+    
     NSString *path = [[NSBundle mainBundle] pathForResource:@"menu" ofType:@"plist"];
     self.menuList = [[NSArray alloc] initWithContentsOfFile:path];
     menutable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width * MENUINSET , self.view.frame.size.height) style:UITableViewStylePlain];
@@ -27,12 +35,13 @@
     menutable.dataSource = self;
     menutable.delegate = self;
     [self.view addSubview:menutable];
-    
+    logOutLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - (self.view.frame.size.height / 10) , self.view.frame.size.width, (self.view.frame.size.height / 10))];
+    logOutLabel.text = @"  Log Out";
+    [self.view addSubview:logOutLabel];
     
 //    self.menuList = @[@"1",@"2",@"3",@"4",@"5"];
     // Do any additional setup after loading the view.
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -44,7 +53,6 @@
 - (void)setMenuList:(NSArray *)menuList
 {
     _menuList = menuList;
-//    [self.view reloadInputViews];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -80,9 +88,9 @@
 }
 */
 
-- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 5;
-}
+//- (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    return 5;
+//}
 
 @end
